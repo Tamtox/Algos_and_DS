@@ -4,19 +4,31 @@
 // Space Complexity: O(1)
 
 const binarySearch = (arr: number[], target: number): number => {
-  let left = 0;
-  let right = arr.length - 1;
-  let middle = Math.floor((left + right) / 2);
+  let start = 0;
+  let end = arr.length - 1;
+  let middle = Math.floor((start + end) / 2);
 
-  while (arr[middle] !== target && left <= right) {
+  while (arr[middle] !== target && start <= end) {
     if (target < arr[middle]) {
-      right = middle - 1;
+      end = middle - 1;
     } else {
-      left = middle + 1;
+      start = middle + 1;
     }
 
-    middle = Math.floor((left + right) / 2);
+    middle = Math.floor((start + end) / 2);
   }
 
   return arr[middle] === target ? middle : -1;
+};
+
+// Exrecise 1 - Name Search
+
+const names = ['Alex', 'Brian', 'Julia', 'Kojin', 'Nabil', 'Nick', 'Winnie'];
+
+const nameSearch = (namesList: string[], targetName: string) => {
+  const start = 0;
+  const end = namesList.length - 1;
+  const index: number | null = null;
+
+  return index;
 };
