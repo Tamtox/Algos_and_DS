@@ -21,16 +21,6 @@ const binarySearch = (arr: number[], target: number): number => {
   return arr[middle] === target ? middle : -1;
 };
 
-// Big O Notation - time complexity of algorithm
-
-// O(1) - constant time
-// O(log n) - logarithmic time
-// O(n) - linear time
-// O(n log n) - linearithmic time
-// O(n^2) - quadratic time
-// O(2^n) - exponential time
-// O(n!) - factorial time
-
 // Exrecise 1 - Name Search
 
 const names = ['Alex', 'Brian', 'Julia', 'Kojin', 'Nabil', 'Nick', 'Winnie'];
