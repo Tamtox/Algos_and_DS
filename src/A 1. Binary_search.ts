@@ -3,22 +3,19 @@
 // Time Complexity: O(log n)
 // Space Complexity: O(1)
 
-const binarySearch = (arr: number[], target: number): number => {
+const binarySearch = (arr: number[], target: number): number | null => {
   let start = 0;
   let end = arr.length - 1;
   let middle = Math.floor((start + end) / 2);
-
   while (arr[middle] !== target && start <= end) {
     if (target < arr[middle]) {
       end = middle - 1;
     } else {
       start = middle + 1;
     }
-
     middle = Math.floor((start + end) / 2);
   }
-
-  return arr[middle] === target ? middle : -1;
+  return arr[middle] === target ? middle : null;
 };
 
 // Exrecise 1 - Name Search

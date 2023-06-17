@@ -2,7 +2,10 @@
 // Memory is not stored in a contiguous block, but rather each node points to the next node.
 
 class ListNode {
-  constructor(public data: number, public next: ListNode | null = null) {}
+  constructor(public data: number, public next: ListNode | null = null) {
+    this.data = data;
+    this.next = next;
+  }
   append(data: number) {
     if (this.next === null) {
       this.next = new ListNode(data);
