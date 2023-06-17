@@ -34,14 +34,14 @@ const compareStrings = (a: string, b: string) => {
   return -1;
 };
 
-const nameSearch = (namesList: string[], targetName: string) => {
-  if (namesList.length === 0) return null;
-  if (namesList.length === 1) return namesList[0] === targetName ? 0 : null;
-  const start = 0;
-  const end = namesList.length - 1;
-  const middle = Math.floor((start + end) / 2);
-  const middleName = namesList[middle];
-  const comparison = compareStrings(middleName, targetName);
-  const arr = comparison === 0 ? namesList.slice(0, middle) : namesList.slice(middle + 1);
-  return comparison === -1 ? middle : nameSearch(arr, targetName);
-};
+// const nameSearch = (namesList: string[], targetName: string) => {
+//   if (namesList.length === 0) return null;
+//   if (namesList.length === 1) return namesList[0] === targetName ? 0 : null;
+//   const start = 0;
+//   const end = namesList.length - 1;
+//   const middle = Math.floor((start + end) / 2);
+//   const middleName = namesList[middle];
+//   const comparison = compareStrings(middleName, targetName);
+//   const arr = comparison === 0 ? namesList.slice(0, middle) : namesList.slice(middle + 1);
+//   return comparison === -1 ? middle : nameSearch(arr, targetName);
+// };
